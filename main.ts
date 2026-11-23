@@ -9,9 +9,9 @@ import { join } from "node:path";
 const SIX_WORD_STORY = "He planted tomatoes. She never returned.";
 
 // Write the story to entry.txt, creating the output directory if needed.
-function writeEntry(dir: string, text: string): void {
-  mkdirSync(dir, { recursive: true });
-  writeFileSync(join(dir, "entry.txt"), text + "\n", "utf8");
+function writeEntry(outDir: string, text: string): void {
+  mkdirSync(outDir, { recursive: true });
+  writeFileSync(join(outDir, "entry.txt"), text + "\n", "utf8");
 }
 
 function main(): void {
